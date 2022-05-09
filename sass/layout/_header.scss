@@ -1,0 +1,118 @@
+.header {
+    background: var(--white-text-color);
+    border-bottom: 1px solid #ececec;
+}
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+    margin-right: 93px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    color: var(--accent-text-color);
+}
+
+.logo__span {
+    color: var(--title-text-color);
+}
+
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+}
+
+.menu-list__item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-list__item:nth-child(n+2) {
+    margin-left: 50px;
+}
+
+.menu-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-list__link:hover,
+.menu-list__link:focus {
+    color: var(--accent-text-color);
+
+}
+
+.curent {
+    color: var(--accent-text-color);
+}
+
+.curent::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--accent-text-color);
+}
+
+.connect {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.connect__link {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--paragraph-text-color);
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.connect__link:hover,
+.connect__link:focus {
+    color: var(--accent-text-color);
+}
+
+.connect__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.connect__icon:hover,
+.connect__icon:focus {
+    fill: var(--accent-text-color);
+}
+
+.connect .menu-list__item+.menu-list__item {
+    margin-left: 50px;
+}

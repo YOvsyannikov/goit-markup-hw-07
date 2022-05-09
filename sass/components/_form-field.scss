@@ -1,0 +1,22 @@
+.form-field {
+    display: flex;
+    flex-direction: column;
+
+    &__spaceF {
+        margin-bottom: 12px;
+    }
+
+    &__spaceL {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--paragraph-text-color);
+        margin-bottom: 4px;
+    }
+}
