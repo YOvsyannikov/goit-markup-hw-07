@@ -1,29 +1,17 @@
-.our-service {
+.section--no-pading-top {
     padding-top: 0;
 }
 
-.our-service-title {
-    margin-bottom: 50px;
-
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-}
-
-.service-list {
+.service {
     display: flex;
     align-items: center;
 }
 
 .service__item {
     position: relative;
-}
-
-.service__item:nth-child(n+2) {
-    margin-left: 30px;
+    &:nth-child(n+2) {
+        margin-left: 30px;
+        }
 }
 
 .service__direction {

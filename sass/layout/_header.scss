@@ -14,16 +14,16 @@
 
     color: var(--accent-text-color);
 }
+
 .header__logo {
     margin-right: 93px;
 }
-
 .logo__span {
     color: var(--title-text-color);
 }
 
 
-.header__nav {
+.header__container {
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -32,22 +32,24 @@
     letter-spacing: 0.02em;
 }
 
-.menu-list {
+.menu {
     display: flex;
     align-items: center;
 }
 
-.menu-list__item {
+.menu__item {
     position: relative;
     display: inline-flex;
     align-items: center;
+
+    &:nth-child(n+2) {
+            margin-left: 50px;
+        }
 }
 
-.menu-list__item:nth-child(n+2) {
-    margin-left: 50px;
-}
 
-.menu-list__link {
+
+.menu__link {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -56,36 +58,41 @@
     transition-duration: 250ms;
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+    
+        }
 }
 
-.menu-list__link:hover,
-.menu-list__link:focus {
+.menu__link--curent {
     color: var(--accent-text-color);
 
-}
-
-.curent {
-    color: var(--accent-text-color);
-}
-
-.curent::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: var(--accent-text-color);
+    &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+    
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: var(--accent-text-color);
+        }
 }
 
 .connect {
     display: flex;
     margin-left: auto;
 
+    &__item+&__item {
+        margin-left: 50px;
+        }
+
 }
+
 
 .connect__link {
     display: flex;
@@ -97,23 +104,24 @@
     transition-duration: 250ms;
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+        }
 }
 
-.connect__link:hover,
-.connect__link:focus {
-    color: var(--accent-text-color);
-}
+
 
 .connect__icon {
     margin-right: 10px;
     fill: currentColor;
+
+        &:hover,
+        &:focus {
+            fill: var(--accent-text-color);
+        }
 }
 
-.connect__icon:hover,
-.connect__icon:focus {
-    fill: var(--accent-text-color);
-}
 
-.connect .menu-list__item+.menu-list__item {
-    margin-left: 50px;
-}
+
